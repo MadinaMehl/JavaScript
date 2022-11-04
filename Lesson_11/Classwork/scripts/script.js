@@ -81,4 +81,4 @@ const people = [
 
   console.log(getProperty2(people, 'first_name'));  // ['Ivan', 'Petr', 'irina', 'Denis']
   console.log(getProperty2(people, 'age'));  // [20, 12, 46, 30]
- 
+  
