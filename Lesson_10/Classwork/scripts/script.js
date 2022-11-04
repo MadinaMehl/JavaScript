@@ -1,6 +1,6 @@
 // let a = 5; // number
-// let b = 'hello';
-// let c = true;
+// let b = 'hello';  // string
+// let c = true; // boolean
 
 // let user = {
 //     // 'first name': 'Nelli',
