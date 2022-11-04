@@ -13,9 +13,9 @@
         }
     }
 
-    let car_1 = new Car('BMW', 'X3', 'Germany', 300);
+    let car_1 = new Car('BMW', 'X3', 'Germany', 3.0);
   
-    console.log(car_1);
+    // console.log(car_1);
   
     
 
@@ -28,23 +28,30 @@
 
 
     class Country {
-        constructor(name, capital, population, climat) {
+        constructor(name, capital, population, climate) {
             this.name = name;
             this.capital = capital;
             this.population = population;
-            this.climat = climat;
+            this.climate = climate;
+        }
+
+        getInfo() {
+            console.log(`Country: ${this.name}, Capital: ${this.capital}, Population: ${this.population}, Climate is ${this.climate}!`);
         }
     }
 
+
     let country_1 = new Country('Germany', 'Berlin', 88, 'cloudy');
     let country_2 = new Country('Russia', 'Moscow', 125, 'cold');
-    let country_3 = new Country('UAS', 'Abu Dhabi', 10, 'warm');
+    let country_3 = new Country('UAE', 'Abu Dhabi', 10, 'warm');
 
-    console.log(country_1.capital);
-    console.log(country_2.name);
-    console.log(country_3.climat);
+    // console.log(country_1.capital);
+    // console.log(country_2.name);
+    // console.log(country_3.climate);
 
-
+    country_1.getInfo();
+    country_2.getInfo();
+    country_3.getInfo();
 
 
 
