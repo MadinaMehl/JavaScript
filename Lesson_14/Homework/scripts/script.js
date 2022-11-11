@@ -46,28 +46,41 @@ const workers = [
     },
   ];
 
-  const rootElem = document.querySelector(".root");
+  const rootElem = document.querySelector("#root");
 
-  workers.forEach(({ id, first_name, last_name, age, rate, days, photo }) => {
+  workers.forEach(({ id, first_name, last_name, age, rate, days, photo, progress }) => {
     const card = document.createElement("div");
     const idElem = document.createElement("p");
-    const fullNameElem = document.createElement("P");
+    const firstNameElem = document.createElement("p");
+    const lastNameElem = document.createElement("p");
     const ageElem = document.createElement("p");
     const salaryElem = document.createElement("p");
     const photoElem = document.createElement("img");
+    const progressContainer = document.createElement("div");
+    const progressLine = document.createElement("div");
+    const progressValue = document.createElement("p");
 
     idElem.innerText = `ID: ${id}`;
-    fullNameElem.innerText = `Full name: ${first_name} ${last_name}`;
+    firstNameElem.innerText = `First name: ${first_name}`;
+    lastNameElem.innerText = `Last name: ${last_name}`;
     ageElem.innerText = `Age: ${age}`;
     salaryElem.innerText = `Salary: ${rate * days}$`;
+    progressValue.innerText = progress + "%";
 
     card.classList.add("card");
     photoElem.classList.add("photo");
+    progressContainer.classList.add("progress-container");
+    progressLine.classList.add("progress-line");
+    progressValue.classList.add("progress-value");
+
+   progressLine.style.width = progress + "%";
 
     photoElem.setAttribute("src", photo);
-    photoElem.setAttribute("alt", "image");
+    photoElem.setAttribute("alt", "photo of worker");
 
-    card.append(idElem, fullNameElem, ageElem, salaryElem, photoElem);
+
+    progressContainer.append(progressLine, progressValue);
+    card.append(idElem, firstNameElem, lastNameElem, ageElem, salaryElem, photoElem, progressContainer);
     rootElem.append(card);
   });
 

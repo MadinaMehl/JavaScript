@@ -1,17 +1,40 @@
-.root {
-    display: flex;
+* {
+    padding: 0;
+    margin: 0;
 }
+
+/* #root {
+    display: flex;
+} */
 
 .card {
     border: 1px solid black;
     border-radius: 10px;
-    width: 300px;
-    background-color: #fff7e7;
+    width: 200px;
+    background-color: bisque;
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
 }
 
 .photo {
     display: block;
     padding: 15px;
+}
+
+.progress-container {
+    position: relative;
+    border: 1px solid black;
+    height: 20px;
+}
+
+.progress-line {
+    position: absolute;
+    background-color: lightsalmon;
+    height: 20px;
+}
+
+.progress-value {
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
