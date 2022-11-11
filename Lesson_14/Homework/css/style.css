@@ -1,0 +1,17 @@
+.root {
+    display: flex;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #fff7e7;
+    padding: 10px;
+    margin: 15px;
+}
+
+.photo {
+    display: block;
+    padding: 15px;
+}

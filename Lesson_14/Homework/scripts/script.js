@@ -46,3 +46,28 @@ const workers = [
     },
   ];
 
+  const rootElem = document.querySelector(".root");
+
+  workers.forEach(({ id, first_name, last_name, age, rate, days, photo }) => {
+    const card = document.createElement("div");
+    const idElem = document.createElement("p");
+    const fullNameElem = document.createElement("P");
+    const ageElem = document.createElement("p");
+    const salaryElem = document.createElement("p");
+    const photoElem = document.createElement("img");
+
+    idElem.innerText = `ID: ${id}`;
+    fullNameElem.innerText = `Full name: ${first_name} ${last_name}`;
+    ageElem.innerText = `Age: ${age}`;
+    salaryElem.innerText = `Salary: ${rate * days}$`;
+
+    card.classList.add("card");
+    photoElem.classList.add("photo");
+
+    photoElem.setAttribute("src", photo);
+    photoElem.setAttribute("alt", "image");
+
+    card.append(idElem, fullNameElem, ageElem, salaryElem, photoElem);
+    rootElem.append(card);
+  });
+
