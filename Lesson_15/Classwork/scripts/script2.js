@@ -23,4 +23,4 @@ form.addEventListener("submit", (event) => {
   event.target.full_name.value = "";
   event.target.age.value = "";
 
-});
+}); 

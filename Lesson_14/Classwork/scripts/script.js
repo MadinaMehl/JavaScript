@@ -57,7 +57,7 @@ const data = [
     titleElem.innerText = `Title: ${title}`;
     priceElem.innerText = `Price: ${price}$`;
     
-   card.classList.add('card');
+    card.classList.add('card');
 
     card.append(idElem, titleElem, priceElem);
     rootElem.append(card);
