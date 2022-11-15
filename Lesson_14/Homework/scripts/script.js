@@ -73,7 +73,7 @@ const workers = [
     progressLine.classList.add("progress-line");
     progressValue.classList.add("progress-value");
 
-   progressLine.style.width = progress + "%";
+    progressLine.style.width = progress + "%";
 
     photoElem.setAttribute("src", photo);
     photoElem.setAttribute("alt", "photo of worker");
