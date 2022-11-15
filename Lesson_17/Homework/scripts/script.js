@@ -27,7 +27,6 @@ const cardsRender = () => {
       const salaryElem = document.createElement("p");
       const emailElem = document.createElement("a");
       const photoElem = document.createElement("img");
-      const progressElem = document.createElement("p");
       const progressContainer = document.createElement("div");
       const progressLine = document.createElement("div");
       const progressValue = document.createElement("p");
